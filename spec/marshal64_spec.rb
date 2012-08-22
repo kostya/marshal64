@@ -17,5 +17,14 @@ describe Marshal64 do
     str = Marshal64.encode(x)
     Marshal64.decode(str).should == x
   end
+  
+  it "work on large data" do
+    data = {}
+    10000.times{|i| data["#{i}".to_sym] = [i, "i_#{i}"]}
+
+    s = Marshal64.dump(data)
+    Marshal64.load(s).should == data
+  end
+  
 
 end
