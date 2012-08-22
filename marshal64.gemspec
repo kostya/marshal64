@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
 
   s.authors = ["Makarchev K"]
   
-  s.description = %q{}  
-  s.summary = %q{}
+  s.description = %q{Marshal + Base64 coder. Usefull for serialize data to db.}
+  s.summary = %q{Marshal + Base64 coder. Usefull for serialize data to db.}
 
   s.email = %q{kostya27@gmail.com}
-  s.homepage = %q{ http://github.com/kostya/marshal64 }
+  #s.homepage = %q{http://github.com/kostya/marshal64}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
