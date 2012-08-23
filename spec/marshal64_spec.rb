@@ -26,5 +26,9 @@ describe Marshal64 do
     Marshal64.load(s).should == data
   end
   
+  it "spec data" do
+    x = {:args => [1, 2, 3, :a, 'b'] * 10, 'queue' => :name}
+    Marshal64.dump(x).should == "BAh7ByIKcXVldWU6CW5hbWU6CWFyZ3NbN2kGaQdpCDoGYSIGYmkGaQdpCDsH\nQAhpBmkHaQg7B0AIaQZpB2kIOwdACGkGaQdpCDsHQAhpBmkHaQg7B0AIaQZp\nB2kIOwdACGkGaQdpCDsHQAhpBmkHaQg7B0AIaQZpB2kIOwdACA==\n" 
+  end  
 
 end
